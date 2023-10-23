@@ -29,8 +29,8 @@ h1 {
 .notas-list .card {
     display: flex;
     flex-direction: column;
-    min-height: 201px; // retirar??
-    padding: 16px; //Era 12
+    min-height: 201px; 
+    padding: 16px;
     border-radius: 8px;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
 }
@@ -46,7 +46,7 @@ h1 {
 .notas-list .card .card-header button {
     background-color: transparent;
     border: none;
-}
+}   
 
 .notas-list .card .card-header i {
     font-size: 32px;
