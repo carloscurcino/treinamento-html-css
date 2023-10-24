@@ -91,7 +91,9 @@ h1 {
     color: #FFFFFF;
     background-color: #00A4BD;
 }
-
+.ph-trash{
+    color: #D04F4F;
+}
 .create-nota {
     position: fixed;
     bottom: 20px; /* Ajuste o posicionamento vertical */
@@ -103,10 +105,14 @@ h1 {
     border-radius: 50%;
     outline: none;
     background-color: #000000;
+    border: none;
     color: #FFF;
     font-size: 35px;
+    transition: transform 0.3s;
 }
-
+.create-nota button:hover{
+    transform: rotate(45deg); /* Rotação de 45 graus no hover */
+}
 @media (max-width: 768px) {
     .container{
         padding: 50px 90px;
@@ -128,5 +134,9 @@ h1 {
 @media (max-width: 300px) {
     .container{
         padding: 50px 20px;
+    }
+    .create-nota {
+        align-items: center;
+        right: 30%; /* Ajuste o posicionamento horizontal */
     }
 }
