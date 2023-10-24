@@ -108,11 +108,48 @@ h1 {
     border: none;
     color: #FFF;
     font-size: 35px;
+    cursor: pointer;
     transition: transform 0.3s;
 }
 .create-nota button:hover{
     transform: rotate(45deg); /* Rotação de 45 graus no hover */
 }
+
+
+.modal {
+    display: flex;
+    width: 782px;
+    height: 539px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0; 
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.24);
+  }
+  
+  .modal::backdrop {
+    backdrop-filter: blur(5px)
+  }   
+  
+  .modal h2 {
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+  }
+  .modal textarea{
+    resize: none;
+    width: 100%;
+  }
+  .modal button {
+    cursor: pointer;
+  }
+  
+    
 @media (max-width: 768px) {
     .container{
         padding: 50px 90px;
