@@ -14,7 +14,7 @@ body {
 .container {
     width: 100%;
     max-width: 100%;
-    padding: 50px 128px ;
+    padding: 50px 128px;
     box-sizing: border-box;
 }
 h1 {
@@ -101,16 +101,32 @@ h1 {
     width: 77px;
     height: 77px;
     border-radius: 50%;
+    outline: none;
     background-color: #000000;
     color: #FFF;
     font-size: 35px;
 }
 
 @media (max-width: 768px) {
+    .container{
+        padding: 50px 90px;
+    }
     .notas-list {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
     .create-nota {
         justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .container{
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 300px) {
+    .container{
+        padding: 50px 20px;
     }
 }
