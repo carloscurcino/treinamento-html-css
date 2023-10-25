@@ -17,13 +17,14 @@ body {
     padding: 50px 128px;
     box-sizing: border-box;
 }
+
 h1 {
     margin: 32px 0;
 }
 
 .notas-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*Tamanho correto 278px*/
     gap: 24px;
 }
 .notas-list .card {
@@ -119,15 +120,12 @@ h1 {
 .modal {
     width: 782px;
     height: 539px;
-    position: fixed; /* Alterado para posição fixa */
+    position: fixed;
     top: 50%; /* Centralizar verticalmente */
     left: 50%; /* Centralizar horizontalmente */
     transform: translate(-50%, -50%); /* Centralizar completamente */
     padding: 12px;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 12px;
-    flex-shrink: 0;
     border-radius: 8px;
     background-color: #fff;
     border: none;
@@ -137,14 +135,32 @@ h1 {
   .modal::backdrop {
     backdrop-filter: blur(5px)
   }   
+  .modal .modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
   
+  .modal form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+  }
   .modal input {
+    width: 100%;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal; 
-    color:black
+    padding: 5px;
+    color:black;
+    border-radius: 5px;
+    border: 1px solid #E7E7E7;
   }
   .modal form input::placeholder {
     color: #000;
@@ -152,13 +168,43 @@ h1 {
     opacity: 1;
   }
   .modal textarea{
-    resize: none;
     width: 100%;
+    padding: 5px;
+    flex: 1;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #E7E7E7;
   }
-  .modal button {
+  .modal .modal-header{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+  .modal .close-modal {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #D04F4F;
+    margin-bottom: 12px;
+  }
+  .modal .modal-create-note{
+    background-color: #000;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 600;
     cursor: pointer;
   }
-  
+  .modal .modal-create-note:hover{
+    background-color: #484848;
+  }
+
+  .modal-open {
+    overflow: hidden;
+}
+
     
 @media (max-width: 768px) {
     .container{

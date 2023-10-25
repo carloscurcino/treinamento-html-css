@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Notas</h1>
-        <div class="notas-list">
+        <main class="notas-list">
             <div class="card">
                 <div class="card-header">
                     <span>Lorem</span>
@@ -181,7 +181,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </main>
         <div class="create-nota">
             <button id="create-note" class="open">+</button>
         </div>
@@ -189,14 +189,18 @@
 
     <!-- MODAL POPUP -->
     <dialog class="modal" aria-labelledby="dialog-title">
-        <button type="button" class="btn close" aria-label="Fechar modal">X</button>
-         <form method="dialog">
-            <input type="text" placeholder="Insira seu titulo"/>
-          <textarea cols="50" rows="14" placeholder="O que vamos anotar?"></textarea>
-          <!-- <button type="submit">Enviar</button> -->
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <button type="button" id="close-modal-btn" class="close-modal" aria-label="Fechar modal">X</button>
+            </div>
+             <form id="modal-form" method="dialog">
+                <input type="text" placeholder="Insira seu titulo"/>
+              <textarea placeholder="O que vamos anotar?"></textarea>
+              <button type="submit" class="modal-create-note">Criar</button>
+        </div>
         </form>
-      </dialog>
+    </dialog>
 
-      <script src="js/app.js"></script> 
-    </body>
+    <script src="js/app.js"></script> 
+</body>
 </html>
